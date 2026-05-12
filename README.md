@@ -6,7 +6,7 @@ Unix-like tmux configuration branch.
 
 ```bash
 mkdir -p ~/.config
-git clone -b unix-like https://github.com/crowforkotlin/crowforkotlin.config.tmux.git ~/.config/tmux
+git clone --recurse-submodules -b unix-like https://github.com/crowforkotlin/crowforkotlin.config.tmux.git ~/.config/tmux
 cd ~/.config/tmux
 ```
 
@@ -15,9 +15,15 @@ cd ~/.config/tmux
 ```bash
 cd ~/.config/tmux
 git pull origin unix-like
+git submodule update --init --recursive
 ```
 
 ## Branch
 
 - active branch: `unix-like`
 - target platforms: Linux, macOS, and similar systems
+
+## Included dependencies
+
+- `plugins/catppuccin/tmux`
+- `plugins/oh-my-tmux`
