@@ -6,7 +6,7 @@ Windows tmux configuration branch.
 
 ```powershell
 New-Item -ItemType Directory -Force "$env:USERPROFILE\\.config" | Out-Null
-git clone -b windows https://github.com/crowforkotlin/crowforkotlin.config.tmux.git "$env:USERPROFILE\\.config\\tmux"
+git clone --recurse-submodules -b windows https://github.com/crowforkotlin/crowforkotlin.config.tmux.git "$env:USERPROFILE\\.config\\tmux"
 Set-Location "$env:USERPROFILE\\.config\\tmux"
 ```
 
@@ -15,9 +15,15 @@ Set-Location "$env:USERPROFILE\\.config\\tmux"
 ```powershell
 Set-Location "$env:USERPROFILE\\.config\\tmux"
 git pull origin windows
+git submodule update --init --recursive
 ```
 
 ## Branch
 
 - active branch: `windows`
 - target platform: Windows
+
+## Included dependencies
+
+- `plugins/catppuccin/tmux`
+- `plugins/oh-my-tmux`
