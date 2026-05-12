@@ -1,3 +1,6 @@
+# Keep Oh my tmux! behavior, but let Catppuccin handle the look.
+tmux_conf_theme=disabled
+
 # ==============================================================================
 # Tmux Windows Config 
 # ==============================================================================
