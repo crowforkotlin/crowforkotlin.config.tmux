@@ -87,6 +87,12 @@ set-window-option -g automatic-rename off
 bind-key -n M-r command-prompt -I "#W" "rename-window '%%'"  # Option + r 重命名当前 Tab
 
 # ------------------------------------------------------------------------------
-# 10. 配置重载
+# 10. Ctrl + Alt + [ 和 ] 移动Window
+# ------------------------------------------------------------------------------
+bind-key -n C-M-[ swap-window -t -1\; select-window -t -1
+bind-key -n C-M-] swap-window -t +1\; select-window -t +1
+
+# ------------------------------------------------------------------------------
+# 11. 配置重载
 # ------------------------------------------------------------------------------
 bind r source-file ~/.config/tmux/tmux.conf \; display-message "配置已重载！"
